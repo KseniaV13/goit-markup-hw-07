@@ -8,34 +8,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <!--Шапка меню-->
   <body class="body">
     <header class="header">
       <div class="container main-nav">
-        <nav class="header__list-header">
-          <a class="logo-header header__logo-header" href="./"><span class="header__web-header">Web</span>Studio</a>
+        <nav class="header__list">
+          <a class="logo-header header__logo" href="./index.html"><span class="header__web-header">Web</span>Studio</a>
           <ul class="list-header-menu">
-            <li><a href="./index.html">Студия</a></li>
+            <li><a  href="./index.html">Студия</a></li>
             <li><a class="list-header-menu__active" href="./portfolio.html">Портфолио</a></li>
             <li><a href="#address">Контакты</a></li>
           </ul>
         </nav>
 
-        <ul class="header-contacts">
-          <li class="header-contacts__header-mail">
+         <ul class="header-contacts">
+          <li class="header-contacts__link">
             <svg width="16" height="12">
-              <use class="header-contacts__header-icons-mail" href="./image/icon/sprite.svg#icon-envelope"></use>
+              <use class="header-contacts__icons" href="./image/icon/sprite.svg#icon-envelope"></use>
             </svg>
-            <a class="contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <a class="contacts " href="mailto:info@devstudio.com">info@devstudio.com</a>
           </li>
-          <li class="header-contacts__header-tel">
+          <li class="header-contacts__link">
             <svg width="10" height="16">
-              <use class="header-contacts__header-icons-tel" href="./image/icon/sprite.svg#icon-smartphone"></use>
+              <use class="header-contacts__icons" href="./image/icon/sprite.svg#icon-smartphone"></use>
             </svg>
-            <a class="contacts link" href="tel:+380961111111">+38 096 111 11 11</a>
+            <a class="contacts " href="tel:+380961111111">+38 096 111 11 11</a>
           </li>
         </ul>
       </div>
@@ -271,7 +272,7 @@
           </ul>
         </div>
 
-        <form class="subscribe">
+        <form class="subscribe" autocomplete="off">
           <p class="subscribe__footer-title">Подпишитесь на рассылку</p>
           <div class="subscribe__footer-row">
             <input class="subscribe__footer-mail" type="text" name="mail" id="name" placeholder="E-mail" />

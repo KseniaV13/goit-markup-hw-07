@@ -18,13 +18,17 @@ h4 {
   --while-color: #ffffff;
   --black-color: #212121;
   --grey-color: #757575;
-  --dark-gray-color: #2f303a;
+  --dark-grey-color: #2f303a;
   --button-color: #f5f4fa;
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --our-team-color: #f5f4fa;
   --icon-color: #afb1b8;
   --icon-footer-color: rgba(255, 255, 255, 0.1);
   --card-color: rgba(33, 150, 243, 0.9);
+  --backdrop-color:rgba(0, 0, 0, 0.2);
+  --fon-on-picture:rgba(47, 48, 58, 0.8);
+  --texterea-color:rgba(117, 117, 117, 0.5);
+
 }
 
 /*Шапка меню*/
@@ -47,20 +51,17 @@ section {
   justify-content: space-between;
   align-items: center;
 }
-.header__logo-header {
+.header__logo{
   display: block;
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
   color: var(--black-color);
 }
-.header-contacts__header-mail,
-.header-contacts__header-tel {
+
+.header-contacts__link{
   align-items: center;
-}
-.header-contacts__header-mail,
-.header-contacts__header-tel {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -70,20 +71,16 @@ section {
 .contacts {
   margin-left: 10px;
 }
-.header-contacts__header-icons:hover {
+.header-contacts__icons:hover {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  color: #2196f3;
+  color:var(--pretty-color);
 }
-
-.header-contacts__header-mail:hover a,
-.header-contacts__header-mail:hover .header-contacts__header-icons-mail,
-.header-contacts__header-tel:hover a,
-.header-contacts__header-tel:hover .header-contacts__header-icons-tel {
+.header-contacts__link:hover .header-contacts__icons{
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  color: #2196f3;
-  fill: #2196f3;
+  color: var(--pretty-color);
+  fill:var(--pretty-color);
 }
 .list-header-menu__active {
   position: relative;
@@ -91,7 +88,7 @@ section {
 }
 .list-header-menu__active::after {
   position: absolute;
-  content: '';
+  content:"";
   top: 43px;
   display: block;
   border-radius: 2px;
@@ -104,18 +101,18 @@ section {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.list-header-menu__active:hover.header__logo-header,
+.list-header-menu__active:hover.header__logo,
 .header__web-header {
   color: var(--pretty-color);
 }
 .header .list-header-menu__active:visited {
   color: var(--pretty-color);
 }
-.header .header__logo-header:hover {
+.header .header__logo:hover {
   color: var(--black-color);
 }
 
-.header__list-header {
+.header__list {
   display: flex;
   align-items: center;
 }
@@ -144,17 +141,15 @@ section {
   font-size: 14px;
   color: var(--black-color);
   display: flex;
-  font-size: 14px;
   line-height: 1.14;
-  font-weight: 500;
   letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
   padding: 24px 0px 25px;
 }
 
-.header__list-header a,
+.header__list a,
 .header__header-contacts a {
-  color: #212121;
+  color: var(--black-color);
   text-decoration: none;
 }
 .list-header a:hover {
@@ -240,7 +235,7 @@ a.contacts {
   bottom: 0;
   left: 0px;
   top: 0px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color:var(--backdrop-color);
 }
 
 /*4 пункта иконки*/
@@ -335,8 +330,7 @@ a.contacts {
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
-  color: #ffffff;
+  color: var(--while-color);
 }
 .features__fon-pictures {
   position: absolute;
@@ -347,7 +341,8 @@ a.contacts {
   bottom: 0;
   width: 100%;
   height: 70px;
-  background: rgba(47, 48, 58, 0.8);
+  background:var(--fon-on-picture);
+
 }
 /*Команда*/
 .team {
@@ -511,8 +506,6 @@ img {
 }
 .portfolio__card-overlay {
   position: absolute;
-  display: flex;
-  align-items: ce;
   overflow-y: scroll;
   transform: translatey(100%);
   width: 100%;
@@ -524,8 +517,9 @@ img {
 }
 
 .portfolio__card-link:hover .portfolio__card-overlay {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  transform: translatey(0);
+ 
+border: 1px solid #EEEEEE;
+ transform: translatey(0);
   background: var(--card-color);
   color: var(--while-color);
 }
@@ -579,7 +573,7 @@ img {
 }
 /*Футер*/
 .footer {
-  background: var(--dark-gray-color);
+  background: var(--dark-grey-color);
   border: none;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -592,7 +586,7 @@ img {
 .address .address__contact-footer:hover {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  color: #2196f3;
+  color:var(--pretty-color);
 }
 .footer__list {
   width: 231px;
@@ -673,18 +667,27 @@ img {
   display: flex;
   flex-direction: row;
 }
+.subscribe__footer-mail:focus{
+   border-color: var(--while-color);
+   transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+}
 .subscribe__footer-mail {
+  cursor: pointer;
   outline: none;
   width: 358px;
   height: 50px;
   margin-top: 20px;
   padding: 15px 16px;
+   font-size: 16px;
+  font-weight: 16px;
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  color: var(--while-color);
 }
 .subscribe__footer-submit {
   cursor: pointer;
@@ -715,7 +718,7 @@ img {
   opacity: 1;
   width: 528px;
   height: 581px;
-  background: #ffffff;
+  background: var(--while-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
@@ -727,7 +730,7 @@ img {
   padding: 0;
   margin-top: 8px;
   margin-left: 490px;
-  background: #ffffff;
+  background: var(--while-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
@@ -775,7 +778,9 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  background: #ffffff;
+  font-size: 14px;
+  font-weight: 14px;
+  background: var(--while-color);
 }
 .form__submit {
   position: absolute;
@@ -790,7 +795,7 @@ img {
   font-weight: bold;
   font-style: normal;
   padding: 10px 55px;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 30px;
   letter-spacing: 0.06em;
   background: var(--pretty-color);
@@ -805,9 +810,9 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  background: #ffffff;
+  background: var(--while-color);
   font-size: 14px;
-  line-height: 16px;
+  line-height: 14px;
   letter-spacing: 0.01em;
 }
 
@@ -815,7 +820,7 @@ textarea {
   cursor: pointer;
   outline: none;
   padding: 12px 16px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.01em;
   transition-duration: 250ms;
@@ -841,7 +846,8 @@ textarea {
 }
 
 textarea::-webkit-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--texterea-color);
+
 }
 .form__form-checkbox {
   margin-top: 20px;

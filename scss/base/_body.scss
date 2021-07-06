@@ -1,0 +1,10 @@
+.body {
+  font-family: $font-base;
+  background: $white-base-color;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

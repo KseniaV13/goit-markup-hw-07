@@ -1,0 +1,73 @@
+/*Команда*/
+.team {
+  background: $our-team-color;
+}
+
+.team__team-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team__command {
+  flex-basis: calc((100% - 90px) / 4);
+  margin-right: 30px;
+  background: $white-base-color;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.team__command:last-child {
+  margin-right: 0;
+}
+.team__our-list {
+  text-align: center;
+  padding: 30px 32px;
+}
+
+.team__name {
+  font-weight: $regular-font;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: $normal-spacing;
+  color:$black-color-base;
+  margin-bottom: 10px;
+}
+
+.team__profession {
+  font-weight: $min-font;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: $normal-spacing;
+  color:$grey-color;
+  margin-bottom: 10px;
+}
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  margin-top: 16px;
+}
+.social-list__link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.social-list__link {
+    &:hover { 
+        transition-duration: $duration;
+        transition-timing-function: $timing-function;
+        cursor: pointer;
+        background: $accent-color;}
+}
+.social-list__link {
+    &:hover use{
+        fill: $white-base-color;
+    }
+}
+
+.social-list__icon-team {
+  width: 20px;
+  height: 20px;
+fill:$icon-color;
+}
